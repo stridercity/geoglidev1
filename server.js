@@ -2,7 +2,7 @@ const serverURL = 'https://geoglidev1.vercel.app'; // Replace with your server's
 const formData = new FormData();
 formData.append('video', blob, 'animation.webm');
 
-fetch(`${serverURL}/save-video`, {
+fetch(`${serverURL}/save-video.js`, {
     method: 'POST',
     body: formData,
 })
