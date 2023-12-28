@@ -1,10 +1,14 @@
 const express = require('express');
+const cors = require('cors'); // Add the cors middleware
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 3000;
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Set up Multer for file uploads
 const storage = multer.memoryStorage();
