@@ -8,6 +8,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 app.use(express.json());
+app.use(express.static('public'));
 
 app.post('/save-video', upload.single('video'), (req, res) => {
     const videoBuffer = req.file.buffer; // Buffer containing the video data
