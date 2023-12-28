@@ -452,7 +452,7 @@ function stopRecording() {
             formData.append('video', blob, 'animation.webm');
 
             // Send the recorded video to the server using AJAX/fetch
-            fetch('/save-video', {
+            fetch('https://geoglidev1.vercel.app/save-video', {
                 method: 'POST',
                 body: formData,
             })
